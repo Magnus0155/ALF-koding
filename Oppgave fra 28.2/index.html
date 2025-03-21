@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="" alt="Logo">
+        <h1>Insert firma navn</h1>
+        <ul><a href="">Link</a></ul>
+        <ul><a href="">Link</a></ul>
+        <ul><a href="">Link</a></ul>
+    </header>
+
+    <main>
+        <form action="">
+        <h1>Skriv inn informasjon her</h1>
+        <input type="text" placeholder="Fornavn" required>
+        <input type="text" placeholder="Etternavn" required>
+        <input type="text" placeholder="Adresse" required>
+        <input type="number" placeholder="postnummer">
+        <input type="email" placeholder="Email">
+        <input type="number" placeholder="Telefonnummer">
+
+        <form action="action_page.php"></form>
+            <label for="FLyplass">Velg hvilken flyplass du skal ta av fra</label>
+            <select name="Flyplass" id="flyplass">
+                <option value="Flyplass1">Flyplass1</option>
+                <option value="Flyplass2">Flyplass2</option>
+                <option value="Flyplass3">Flyplass3</option>
+            </select>
+
+        <p>Velg når du skal dra</p>
+        <input type="datetime-local">
+        <p>Velg når du ankommer</p> 
+        <input type="datetime-local">
+
+        <p>Velg din alder</p>
+        <input type="radio" id="Barn" value="Barn">
+        <label for="Barn">Barn</label><br>
+        <input type="radio" id="Voksen" value="Voksen">
+        <label for="Voksen">Voksen</label><br>
+        <input type="radio" id="Honnør" value="Honnør">
+        <label for="Honnør">Honnør</label>
+
+        <p>Velig hvilken type billet du ønsker å kjøpe</p>
+        <input type="radio" id="Billig billett" value="Billig billett">
+        <label for="Billig billett">Billig billett</label><br>
+        <input type="radio" id="Flex billet" value="Flex billet">
+        <label for="Flex billet">Flex billet</label><br>
+        <input type="radio" id="Super flex" value="Super flex">
+        <label for="Super flex">Super flex</label>
+
+        <p>Kryss av for hvilke nyhetsbrev du vil ha</p>
+        
+            <input type="checkbox" id="recommendations" name="recoomendations" value="recoomendations">
+            <label for="recommendations">Anbefalte flyturer for deg</label>
+            <input type="checkbox" id="our offers" name="our offers" value=" our offers">
+            <label for="our offers">Våre tilbud</label>
+            <input type="checkbox" id="personal-updates" name="newsletter" value="personal-updates">
+            <label for="personal-updates">Personlige oppdateringer</label><br>
+            <input type="submit" value="Send Bestilling">
+        </form>
+    </main>
+
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>

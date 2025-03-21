@@ -1,0 +1,57 @@
+/*Oppgave1*/ 
+
+body {
+    color: blue;
+    font-size: 18px;
+}
+/*oppgave2*/
+
+P {
+    color: green;
+    font-size: bold;
+}
+
+/*Oppgave3*/
+.highlight {
+    background-color: yellow;
+}
+
+/*Oppgave4*/
+#special {
+    color: red;
+}
+/*Oppgave5*/
+h1, h2 {
+    color: blue;
+    text-align: center;
+}
+
+/*Oppgave6*/
+
+div  p {
+    color: orange;
+}
+
+/*Oppgave7*/
+
+div > p {
+    color: purple;
+}
+
+/*Oppgave8*/
+
+h1 + p {
+    color: grey;
+}
+
+/*Oppgave9*/
+
+h1 ~ p {
+    color: brown;
+    ;
+}
+/*Oppgave 10*/
+
+input[type="text"] {
+        background-color: lightblue;
+}

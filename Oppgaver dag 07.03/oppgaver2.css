@@ -1,0 +1,38 @@
+/*Oppgave1*/
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Oppgave2*/
+
+div h2 {
+    color: green;
+}
+
+/*Oppgave3*/
+
+.profile{
+    background-color: blueviolet;
+    padding: 5px;
+}
+
+/*Oppgave4*/
+#user-name {
+    color: red;
+}
+
+/*Oppgave5*/
+.bio p {
+    font-size: 14px;
+}
+
+/*Oppgave6*/
+h2 + p {
+    color: rgb(255, 230, 9);
+}
+
+/*Oppgave7*/
+input[type="email"] {
+    border:5px solid blue;
+}

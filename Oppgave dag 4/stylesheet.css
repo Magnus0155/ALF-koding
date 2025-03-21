@@ -1,0 +1,116 @@
+/* header*/
+
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+}
+
+.nav li {
+  display: inline-block;
+  margin: 10px;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; 
+  color: white; 
+  text-decoration: none;
+  border-radius: 5px; 
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.nav a:hover {
+  background-color: #45a049; 
+  transform: scale(1.1); 
+}
+
+.nav a:active {
+  background-color: #3e8e41; 
+  transform: scale(0.98); 
+}
+
+/* ------------ */
+.flagg {
+    max-width: 20px;
+    max-height: 20px;
+
+  }
+
+.nav {
+  text-decoration-line: none;
+}
+
+  /*Listene oppgave 1*/
+  body.cap, body.cap * {
+    text-transform: uppercase;
+  }
+
+.green {
+  color: green;
+}
+/*Listene oppgave 2*/
+
+.cap {
+  float: right;
+}
+
+/*Liste oppgave3*/
+.hexa{
+  background-color: rgb(192, 126, 4);
+}
+
+
+.cities {
+  text-shadow: 2px 2px red;
+  
+}
+/*Liste oppgave4 og 5*/
+
+.circle {
+  list-style-type: circle;
+}
+.cities {
+  list-style-type: circle;
+}
+/*Liste oppgave 6*/
+dt {
+  border: 2px solid black;
+}
+dd {
+  border: 2px solid black;
+}
+/*Tabeller oppgave 1*/
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 10px;
+}
+
+.folk {
+  background-color: hsl(305, 100%, 35%);
+}
+
+/*Tekster oppgave1*/
+
+.tekstene {
+text-align: center
+}
+
+section p:first-of-type {
+  color: red; 
+}
+
+.seksjon4 {
+  float: right
+}
+section p:nth-of-type(2) {
+  background-color: yellow;
+}

@@ -1,0 +1,93 @@
+/*Nav*/
+.header {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+  }
+  
+  .nav {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav li {
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white; 
+    text-decoration: none;
+    border-radius: 5px; 
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+  }
+  
+  .nav a:hover {
+    background-color: #45a049; 
+    transform: scale(1.1); 
+  }
+  
+  .nav a:active {
+    background-color: #3e8e41; 
+    transform: scale(0.98); 
+  }
+
+
+
+/*Body*/
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Tabell*/
+
+table {
+    width: 50%; 
+    border-collapse: collapse;
+    margin: 20px auto; 
+}
+
+table.image-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.image-cell {
+    width: 25%; 
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+
+}
+
+.image-cell img {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(10, 10, 10, 0.1);
+}
+
+
+/*Footer*/
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: bottom;
+}
+
+.samarbeidspartnere {
+    margin: 20px;
+    max-width: 30px;
+    max-height: 30px;
+}

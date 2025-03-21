@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">  
+        <nav class="nav">
+            <ul>
+                <li><a href="http://127.0.0.1:5500/hovedside.html">hovedside</a></li>
+                <li><a href="http://127.0.0.1:5500/vareside.html">Vareside</a></li>
+                <li><a href="http://127.0.0.1:5500/innlogging.html">Innlogging</a></li>
+                <li><a href="http://127.0.0.1:5500/registrering.html">Registrering</a></li>
+                <li><a href="http://127.0.0.1:5500/kommentarer.html">Kommentarrer</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form action="">
+        <input type="text" name="brukernavn" id="brukernavn" maxlength="6" required>
+        <input type="password" name="password" id="passord" minlength="8" maxlength="16" required>
+        <!--Ekstraoppgave gjør passord mer avansert-->
+        <input type="text" placeholder="Fornavn" required>
+        <input type="text" placeholder="Etternavn" required>
+        <input type="text" placeholder="Adresse" required>
+        <input type="text" name="Postnummer" pattern="4" required>
+        <input type="text" name="Telefonnummer" pattern="4">
+    </form>
+    <footer>
+        <p>Sammarbeidspartnere</p>
+        <img class="samarbeidspartnere" src="images/Adiddas.png" alt="">
+        <img class="samarbeidspartnere" src="Images/Nilke logo.png" alt="">
+    </footer>
+</body>
+</html>

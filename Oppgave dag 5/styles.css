@@ -1,0 +1,35 @@
+/*Knaggene for å referere css til en html heter en selector*/
+
+/* Oppgve1*/
+h1 {
+    color: blue;
+    background-color: green;
+}
+/* Oppgave2*/
+h2 {
+    color: red;
+}
+/* Oppgave3*/
+h6 {
+    background-color: green;
+}
+
+/* Oppgave4*/
+h3 ~ p {
+    font-style: italic;
+}
+
+/* Oppgave5*/
+#omraade3 span {
+    color: blue;
+}
+/* Oppgave6*/
+a {
+    text-decoration:none;
+}
+/* Oppgave7*/
+
+.images {
+    width: 200px;
+    height: 200px;
+}

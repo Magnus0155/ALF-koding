@@ -1,0 +1,116 @@
+/*Header*/
+.header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .nav {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav li {
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white; 
+    text-decoration: none;
+    border-radius: 5px; 
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+  }
+  
+  .nav a:hover {
+    background-color: #45a049; 
+    transform: scale(1.1); 
+  }
+  
+  .nav a:active {
+    background-color: #3e8e41; 
+    transform: scale(0.98); 
+  }
+
+/*Main*/
+* {
+    text-align: center;
+}
+#firmanavn {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+
+
+/*Listen */
+ul {
+    list-style: none;
+  }
+  
+.list::before {
+    content: "😭";
+    margin-right: 10px;
+  }
+
+ul li:nth-child(odd) {
+    color: rgb(255, 0, 0);
+}
+
+/*Tabellen*/
+
+
+table {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.image-cell {
+    width: 25%; 
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;   
+    border: solid black;
+    border-radius: 5%;
+    margin: 5%;
+}
+
+.image-cell:hover{
+    background-color: #45a049; 
+    transform: scale(1.5); 
+}
+
+/*Skjema*/
+
+.tbd {
+    border: solid black;
+    padding: 10%;
+}
+
+input:hover {
+    background-color: aquamarine;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white; 
+    text-decoration: none;
+    border-radius: 5px; 
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: #45a049; 
+    transform: scale(1.1); 
+  }
+  
+  .button:active {
+    background-color: #3e8e41; 
+    transform: scale(0.98); 
+  }

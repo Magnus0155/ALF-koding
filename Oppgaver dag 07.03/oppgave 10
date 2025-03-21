@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Universal Selector</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <h1>Welcome to CSS</h1>
+    <p>This is a paragraph.</p>
+    <button>Click Me</button>
+    <input type="text" placeholder="Text field">
+    <input type="password" placeholder="Password field">
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kontakt oss</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+</head>
+<body>
+    <header class="header">
+        <h1>Kontakt oss</h1>
+        <ul class="nav">
+            <li><a href="http://127.0.0.1:5500/index.html">Hjem</a></li>
+            <li><a href="http://127.0.0.1:5500/om_oss.html">Ansatte</a></li>
+            <li><a href="http://127.0.0.1:5500/prospekt.html">Prospekter</a></li>
+            <li><a href="http://127.0.0.1:5500/kontakt%20oss.html">Kontakt oss</a></li>
+       </ul>
+    </header>
+    <p class="align">Skriv inn din informasjon </p>
+    <form class="omOssForm">
+        
+        <input type="text" placeholder="Fornavn">
+        <input type="text" placeholder="Etternavn"> 
+        <input type="text" placeholder="Epost">
+        <input type="text" placeholder="Telefon nummer">
+            
+    </form>       
+    <p class="align">Velg hva henveldelsen gjelder </p>
+    <form class="omOssForm">
+        <input> <select name="Valg" id="Valg"> 
+            <option value="Kjøp">Kjøp</option>
+            <option value="Salig">Salig</option>
+            <option value="Leie">Leie</option>
+            <option value="Klage">Klage</option>
+        </select>
+    </form>
+    <p class="align">Skriv inn mer informasjon om henvendelsen din</p>
+    <form class="omOssForm">
+        <textarea rows="15" cols="75"></textarea>
+    </form>
+    <div class="omOssForm">
+    <!--<p>Trykk her når du er ferdig</p>
+        <input type="submit"  value="Send inn" onclick=""  (kjedelig knapp)-->
+        <button id="submitBtn">Trykkher når du er ferdig</button>
+   </div>
+   <footer class="footer">
+    <p>Siden er laget av Magnus Eeg</p>
+   </footer>
+</body>
+</html>

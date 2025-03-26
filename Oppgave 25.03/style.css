@@ -1,0 +1,109 @@
+/*Oppgave1*/
+.flagg-container {
+    height: 1000px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.flagg {
+    width: 12%;
+}
+
+.toflagg {
+    
+}
+
+/*Oppgave2*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.norge {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav {  
+
+  display: flex;
+  gap: 15px;
+  margin: 0px 200px 0px 0px;
+ }
+  
+
+
+.flagg-norge {
+    width: 15%;
+    margin: 0px 15px 0px 150px;
+}
+
+/*Oppgave3*/
+
+.hotel {
+    background-image: url("Images/Hotel-background.jpg");
+}
+
+.hotel header h1 {
+    text-align: center;
+    color: bisque;
+    font-size: 500%;
+    font-weight: lighter;
+
+}
+
+.container-left h1 {
+    margin-bottom: 7%;
+}
+.container-left h2 {
+    margin-bottom: 7%;
+}
+
+.container-left h3 {
+    font-weight: lighter;
+    margin-bottom: 7%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100%s ;
+}
+
+.container-left {
+    color: bisque;
+    background-color: hsl(0, 0%, 0%, 0.6);   
+     width: 30%;
+     height: 34vh; 
+     padding: 3%;
+}
+.container-right {
+    color: bisque;
+    background-color:rgba(96, 96, 219, 0.7);
+    width:30%;
+    height: 34vh; 
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.button {
+    color: bisque;
+    background-color: black;
+}
+
+footer {
+    margin-top: 2%;
+    text-align: center;
+}

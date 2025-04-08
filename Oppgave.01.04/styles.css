@@ -1,0 +1,71 @@
+h1, h2, h3 {
+    color: white;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+h1 {
+    font-weight: bolder
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+
+}
+
+
+main {
+    background-color: dodgerblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    
+}
+
+.mainLeft {
+    margin: 10px;
+    width: 100vw;
+}
+.mainRight {
+    margin: 10px;
+    height: 66vh;
+    width: 66vw;
+    display: flex;
+
+}
+
+
+.card {
+
+    margin: 10px ;
+}
+
+
+.theImage {
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    background-color: rgb(139, 156, 253);
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: darkblue;
+    border-radius: 1%;
+    margin: 15px 10px 30px 10px;
+    padding: 10px;
+    height: 25%;
+    width: 25%;
+    box-shadow:5px 5px;
+}

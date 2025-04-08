@@ -1,4 +1,4 @@
-/*Oppgave1*/
+/*Oppgave1 ikke ferdig*/
 .flagg-container {
     height: 1000px;
     width: 1000px;
@@ -70,7 +70,7 @@
 main {
     display: flex;
     justify-content: center;
-    height: 100%s ;
+    height: 100% ;
 }
 
 .container-left {

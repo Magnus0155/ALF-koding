@@ -1,0 +1,72 @@
+/*Oppgave1*/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.HeaderLeft {
+    display: flex;
+}
+
+
+.HeaderRight {
+    display: flex;
+}
+/*noe unødvendig styling, glemte å linke css*/
+/*Oppgave2*/
+
+:root {
+    --fargeVariabelEn:#e70901;
+    --fargeVariabelTo:#00d80b;
+}
+.HeaderLeft {
+    background-color: var(--fargeVariabelEn);
+}
+
+.HeaderRight{
+    background-color: var(--fargeVariabelTo);
+}
+/*Oppgave3*/
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
+.card {
+    background-color: rgb(179, 179, 179);
+    box-shadow: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    border: black solid;
+    transition: transform 0.3s, box-shadow0.3s;
+    padding: 15px;
+
+}
+.card:hover {
+
+    transform: scale(1.1); 
+    font-size: 120%;
+}
+
+.image {
+    max-height: 20vh;
+    max-width: 20vw;
+}
+
+
+/*Oppgave4*/
+.flagg {
+    display: flex;
+    justify-content: space-evenly;
+    height: 20vh;
+    width: 20vw;
+}
+
+/*Oppgave5*/
+@media (max-width:768px) {
+    main section  {flex-direction: column;}
+}
+
+
+/*Oppgave6*/

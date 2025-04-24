@@ -1,4 +1,4 @@
-#myimg {
-    height: 100px;
-    width: 100px;
+#myImg {
+    max-width: 20vh;
+    max-width: 20vw;
 }

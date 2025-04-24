@@ -30,24 +30,24 @@ document.getElementById("fulltnavn").textContent = fulltNavn
 
 }
 
-/*Oppgave4 Ikke ferdig, må legge til img*/
+/*Oppgave4 */
 
 function firstImg() {
     document.getElementById("myImg")
-    .scr="Images/Img1.jpg"
+    .src="Images/Img2.jpg"
 }
 
 function secondImg() {
     document.getElementById("myImg")
-    .scr="Images/Img3.jpg"
+    .src="Images/Img3.jpg"
 }
 
 function thirdImg() {
     document.getElementById("myImg")
-    .scr="Images/Img4.jpg"
+    .src="Images/Img4.jpg"
 }
 
-/*Oppgave5 skal sjekke litt mer*/
+/*Oppgave5 */
 
 
 function btnOne() {

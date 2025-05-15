@@ -107,7 +107,7 @@ document.getElementById("email-btn").addEventListener("click,testFunction")
 
 
 
-//Ekstraoppgave
+//Ekstraoppgave ikke ferdig /tester
 
 function visOppsummering() {
     let navn = document.getElementById("text").value

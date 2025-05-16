@@ -40,6 +40,7 @@ function favColorBtn() {
     const blue = document.getElementById("blue").checked
 
     const answerDiv = document.getElementById("colorAnswer")
+
     if (red) {
         answerDiv.textContent = "Your favourite color is red"
     } else if (green) {
@@ -51,5 +52,23 @@ function favColorBtn() {
     }
 }
 
-//Oppgave 4 lengste oppgaves så langt
+//Oppgave 4 lengste oppgaves så langt, vent til senere
+
+//Oppgave 5 
+
+function displayBtn() {
+    /*let milk = document.getElementById("milk").checked
+    let eggs = document.getElementById("eggs").checked
+    let bacon = document.getElementById("bacon").checked*/
+    let list = document.forms[0]
+    let listTxt = ""
+    let i
+    for (i=0; i < list.length; i++) {
+        if (list[i].checked) {
+            listTxt = listTxt + list[i].value + " "
+        }
+    }
+    document.getElementById("displayDiv").value = "Your list contains: " + listTxt
+
+}
 

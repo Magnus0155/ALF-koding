@@ -60,24 +60,41 @@ function tippeBtn () {
 
 //Oppgave 4 
 
-function calculateBMI(weightKg, heightMeters) {
-    if (heightMeters <= 0) {
-        return "Høyde må være større enn 0.";
+function bmiBtn() {
+
+    const userWeight = parseFloat(document.getElementById("inputWeight").value);
+    const userHeight = parseFloat(document.getElementById("inputHeight").value);
+
+    if (userHeight <= 0 || isNaN(userWeight) || isNaN(userHeight)) {
+        document.getElementById("bmiDiv").innerText = "Vennligst skriv inn gyldige tall.";
+        return;
     }
 
-    const bmi = weightKg / (heightMeters * heightMeters);
-    const roundedBmi = bmi.toFixed(2);
 
-    let category = "";
+    const bmi = userWeight / (userHeight * userHeight)
+    const roundedBmi = bmi.toFixed(2)
+
+    let category = ""
     if (bmi < 18.5) {
-        category = "Undervektig";
+        category = "Undervektig"
     } else if (bmi < 24.9) {
-        category = "Normal vekt";
+        category = "Normal vekt"
     } else if (bmi < 29.9) {
-        category = "Overvektig";
+        category = "Overvektig"
     } else {
-        category = "Fedme";
+        category = "Fedme"
     }
 
-    return `Din BMI er ${roundedBmi} (${category})`;
+    document.getElementById("bmiDiv").innerText = `Din BMI er ${roundedBmi} (${category})`
+}
+
+
+// Oppgave 5
+
+function dateBtn() {
+    let userDate = document.getElementById("dateInput").value
+
+    
+    document.getElementById("dateDiv").innerText = ${"Du skrev inn"} ${userDate}
+
 }

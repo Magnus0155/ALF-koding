@@ -57,9 +57,7 @@ function favColorBtn() {
 //Oppgave 5 
 
 function displayBtn() {
-    /*let milk = document.getElementById("milk").checked
-    let eggs = document.getElementById("eggs").checked
-    let bacon = document.getElementById("bacon").checked*/
+
     let list = document.forms[0]
     let listTxt = ""
     let i
@@ -71,4 +69,6 @@ function displayBtn() {
     document.getElementById("displayDiv").value = "Your list contains: " + listTxt
 
 }
+
+
 

@@ -116,10 +116,18 @@ unorderedListBtn.addEventListener("click", function() {
 
 })
 
-//Ekstraoppgave 2
+//Ekstraoppgave 2 holder på
 
 const inputField = document.querySelector("#textArea")
 const textAreaBtn = document.querySelector("textAreaBtn")
 const displayField = document.querySelector("#displayTextArea")
 
-addBtn.addEventListener
+textAreaBtn.addEventListener("click", function () {
+    const inputFieldValue = inputField.value
+    displayField.appendChild(inputFieldValue)
+
+    inputField.value =""
+
+
+
+})

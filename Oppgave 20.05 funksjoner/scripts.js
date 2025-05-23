@@ -54,7 +54,7 @@ document.addEventListener('click', function() {
     let btnTwo = document.getElementById("btn-two")
 
     btnTwo.addEventListener("click", function() {
-        console.log("Button clicked");
+        console.log("Button clicked")
 
         const inputValueOne = parseInt(numberInputOne.value)
         const inputValueTwo = parseInt(numberInputTwo.value)
@@ -62,7 +62,7 @@ document.addEventListener('click', function() {
         console.log(inputValueOne, inputValueTwo); 
 
         if (!isNaN(inputValueOne) && !isNaN(inputValueTwo)) {
-            console.log("Input values are valid");
+            console.log("Input values are valid")
             arrayTwo.push(inputValueOne, inputValueTwo)
 
             numberInputOne.value = ""
@@ -88,6 +88,21 @@ function numbers(inputValueOne, inputValueTwo) {
     }
 }
 
-//Oppgave 3
+//Oppgave 3 Prøv å gjørde enklere
 
-function arealBtn
+function arealBtn() {
+    const lengde = parseInt(document.getElementById("lengde-input"))
+    const bredde = parseInt(document.getElementById("bredde-input"))
+
+    if (areal = lengde*bredde) {
+        return areal
+    } else {
+        return "skriv inn et gyldig tall"
+    }}
+
+    document.getElementById("arealDiv").innerText = arealBtn()
+
+
+//Oppgave4 
+
+function {}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="brannBtn(`Keepere`)">Vis Keepere</button>
+    <button onclick="brannBtn(`Forsvarsspillere`)">Vis Forsvarsspillere</button>
+
+    <select name="" id="spillerPosisjoner" onchange="brannBtn(this.value)">
+        <option value="Keepere">Keeper</option>
+        <option value="Forsvarsspillere">Forsvarsspillere</option>
+        <option value="Midtbanespillere">Midtbanespillere</option>
+        <option value="Angrepsspillere">Angrepsspillere</option>
+        <button ></button>
+    </select>
+
+    <div id="brannSpillereDiv"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

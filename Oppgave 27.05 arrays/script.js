@@ -153,6 +153,8 @@ let tall = [34,53,2,-3,34,26,-26,85,3,4,98,2,-12]
     summen + negativeTall + gjennomsnitt + minsteTall + partallSumm
 }
 
+// Oppgave 3 
+
 function arrayThreeBtn() {
     let tall = [4,5,2,3,4,6,1,2,0,9,7,6,8,5,6,4,2,3,4,7,3]
     // Tabell av tall og hor mange a
@@ -180,10 +182,27 @@ function arrayThreeBtn() {
     document.getElementById('arrayThreeDiv').innerHTML = tableHTML;
 }
 
+//Oppgave 4 måned array
+
 function arrayFourBtn() {
     const dagerIMåned = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    const månedNavn = ["Januar", "Februar", "Mars", "April", "Mai", "Juni",
+        "Juli", "August", "September", "Oktober", "November", "December"
+    ]
 
+    const input = document.getElementById("monthInput").value.trim()
+    const arrayFourDiv = document.getElementById("arrayFourDiv")
 
+    const index = månedNavn.findIndex(måned => måned.toLowerCase() === input.toLowerCase())
 
-    
+    if (index !== -1) {
+        arrayFourDiv.textContent =`I ${månedNavn[index]} er det 
+        ${dagerIMåned[index]} dager i måneden`
+    }   else {
+        arrayFourDiv.textContent = "Ugyldig måned, Skriv feks Januar, Februar etc"
+    }
+
 }
+
+//Oppgave 5
+

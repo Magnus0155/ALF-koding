@@ -31,7 +31,6 @@ let skrivUt = function(element) {
     console.log(element)
 };
 
-
 desimalArray.forEach(skrivUt)
 
 //c

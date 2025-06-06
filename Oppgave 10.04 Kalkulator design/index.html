@@ -11,26 +11,25 @@
     <h1>Kalkulator</h1>
         <div id="kalkulator">
             
-            <input type="text" id="display">
-
+            <input type="text" name="" id="display">
             
 
             <div class="buttons">
-                <button class="operator">+</button>
-                <button class="number">7</button>
-                <button class="number">8</button>
-                <button class="number">9</button>
-                <button class="operator">-</button>
-                <button class="number">4</button>
-                <button class="number">5</button>
-                <button class="number">6</button>
-                <button class="operator">X</button>
-                <button class="number" onclick="one">1</button>
-                <button class="number">2</button>
-                <button class="number">3</button>
-                <button class="operator">/</button>
-                <button class="number">0</button>
-                <button class="number">,</button>
+                <button class="operator" onclick="addToDisplay('+x|')">+</button>
+                <button class="number" onclick="addToDisplay('7')">7</button>
+                <button class="number" onclick="addToDisplay('8')">8</button>
+                <button class="number" onclick="addToDisplay('9')">9</button>
+                <button class="operator" onclick="addToDisplay('-')">-</button>
+                <button class="number" onclick="addToDisplay('4')">4</button>
+                <button class="number" onclick="addToDisplay('5')">5</button>
+                <button class="number" onclick="addToDisplay('6')">6</button>
+                <button class="operator" onclick="addToDisplay('X')">X</button>
+                <button class="number" onclick="addToDisplay('1')">1</button>
+                <button class="number" onclick="addToDisplay('2')">2</button>
+                <button class="number" onclick="addToDisplay('3')">3</button>
+                <button class="operator" onclick="addToDisplay('/')">/</button>
+                <button class="number" onclick="addToDisplay('0')">0</button>
+                <button class="number" onclick="addToDisplay('.')">,</button>
                 <button id="equalBtn" onclick="special()">=</button>
                 <button class="operator" onclick="addToDisplay('(')">(</button>
                 <button class="operator" onclick="addToDisplay(')')">)</button>

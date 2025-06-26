@@ -1,0 +1,10 @@
+.country {
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin-bottom: 10px;
+    max-width: 300px;
+  }
+  .country img {
+    width: 100px;
+    height: auto;
+  }

@@ -156,19 +156,19 @@ export async function fetchBookings(ulElement) {
 }
 
 /*spesielle tilbud*/
-fetch("data/reiser.json")
+fetch("reiser.json")
   .then((response) => response.json())
   .then((reiser) => {
     const container = document.getElementById("tilbud-container");
-
-    const tilbud = reiser.filter((r) => r.type === "tilbud");
+    const tilbud = reiser.filter((r) => r.type === "tilbud").slice(0, 4); 
+    //  Begrens til 4 med slice
 
     tilbud.forEach((reise) => {
       const kort = document.createElement("div");
-      kort.className = "tilbud-card";
+      kort.className = "tilbud-card card";
 
       kort.innerHTML = `
-        <img src="${reise.bilde}" alt="${reise.tittel}" />
+        <img src="${reise.bilde}" alt="${reise.tittel || 'Reisebilde'}" />
         <h3>${reise.tittel}</h3>
         <p>${reise.beskrivelse}</p>
         <strong>${reise.pris} kr</strong>
@@ -178,5 +178,29 @@ fetch("data/reiser.json")
     });
   })
   .catch((error) => {
+    document.getElementById("tilbud-container").innerHTML =
+      "<p>Kunne ikke laste tilbud akkurat nå.</p>";
     console.error("Klarte ikke å laste reiser:", error);
   });
+
+/*Kategorier*/ 
+
+fetch("data/kategorier.json")
+  .then((res) => reiser.json())
+  .then((kategorier) => {
+    const container = document.getElementById("kategorier");
+
+    kategorier.forEach((kategori) => {
+      const knapp = document.createElement("a");
+      knapp.className = "kategori-knapp";
+      knapp.href = kategori.lenke;
+
+      knapp.innerHTML = `
+        <img src="${kategori.bilde}" alt="${kategori.navn}" />
+        <h3>${kategori.navn}</h3>
+      `;
+
+      container.appendChild(knapp);
+    });
+  })
+  .catch((err) => console.error("Feil ved lasting av kategorier:", err));

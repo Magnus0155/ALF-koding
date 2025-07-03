@@ -1,118 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-      <script type="module">
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyAPhYBT6LHJ4ATaWS4S4hxsjcogttHmNuo",
-  authDomain: "reisebyra-test.firebaseapp.com",
-  projectId: "reisebyra-test",
-  storageBucket: "reisebyra-test.firebasestorage.app",
-  messagingSenderId: "575222547238",
-  appId: "1:575222547238:web:04427c1a2a61962e9bf7e7"
-};
-
-// Initialize Firebase
-
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-    window.db = db; // Gjør tilgjengelig i script.js
-    window.addDoc = addDoc;
-    window.collection = collection;
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Travelagency</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="script.js"></script>
 </head>
 <body id="landingPage">
-    <header>
-        <div>
-        <img id="headerLogo" src="Images/air.png" alt="">
-        </div>
-        <div>
-            <input id="searchInput" type="Search" placeholder="Search">
-        </div>
-        <div>
-            <button id="loggInnBtn">Logg inn</button>
-            <p id="userInfo"></p>
-            <button id="logoutBtn" style="display:none;">Logg ut</button>
-        </div>
-        <nav id="navList">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="OmOss.html">About us</a></li>
-            <li><a href="Destinasjoner.html">Destinasjons</a></li>
-            <li><a href="Lag en konto.html">Logg inn</a></li>
-            <li><a href="Kontakt oss.html">Kontakt oss</a></li>
-            <li><a href="Bestilllingsside.html">Book a trip</a></li>
-            <li><a href="mine-bestillinger.html">My Bookings</a></li>
-        </nav>
-    </header>  
-    <main id="reisebilde">
-        <div id="reiseTekst">
-            <h1>Travel Travelagency</h1>
-            <h2>Travel the world today</h2>
-            <h3>We offer tours across the world</h3>
-        </div>
+  <header class="flex-between header">
+    <div class="logo-container">
+      <img id="headerLogo" src="images/air.png" alt="Travel Travelagency logo" />
+    </div>
+    <div class="search-container">
+      <input id="searchInput" type="search" placeholder="Search" />
+    </div>
+    <div class="user-controls">
+      <button id="loggInnBtn">Logg inn</button>
+      <p id="userInfo"></p>
+      <button id="logoutBtn" style="display:none;">Logg ut</button>
+    </div>
+    <nav>
+      <ul id="navList" class="nav-list flex-between">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="OmOss.html">About us</a></li>
+        <li><a href="Destinasjoner.html">Destinations</a></li>
+        <li><a href="Lag en konto.html">Logg inn</a></li>
+        <li><a href="Kontakt oss.html">Contact us</a></li>
+        <li><a href="Bestilllingsside.html">Book a trip</a></li>
+        <li><a href="mine-bestillinger.html">My bookings</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!--Legge til en api enten for brukerens posisjon eller for reisested-->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div id="reiseTekst" class="hero-text">
+        <h1>Travel Travelagency</h1>
+        <h2>Travel the world today</h2>
+        <h3>We offer tours across the world</h3>
+      </div>
+    </section>
 
-        <!--3 "spesielle" tilbud-->
-        <div id="tilbud-container" class="card-wrapper">
-        <h1>Popular travel destinations right now</h1>
-        </div>
+    <!-- Tilbud Section -->
+    <section id="tilbud" class="card-wrapper">
+      <h2>Popular travel destinations right now</h2>
+      <div id="tilbud-container" class="card-grid"></div>
+    </section>
 
-        <!--Legge til en falsk add for å se hvordan det vil se ut-->
-        
-        <div id="fakeAdd">
+    <!-- Fake Advertisement -->
+    <div id="Add" class="fake-ad">
+    <img src="images/fakeAdd.gif" alt="Fake Add!"/>
+    </div>
 
-        </div>
+    <!-- Kategorier -->
+    <section id="kategorier-section">
+      <h2>Choose a category</h2>
+      <div id="kategorier" class="card-wrapper"></div>
+    </section>
 
-        <div id="kategorier" class="card-wrapper">
-            <h2>Chose a category for you</h2>
-        </div>
+    <!-- Populære Reiser -->
+    <section id="popular-travel-section">
+      <h2>Popular traveling destinations</h2>
+      <div id="travelOptions" class="card-wrapper"></div>
+    </section>
 
-        <!--Legg ril 6 populære destinasjoner gjærne dynamisk-->
-        <div id="travelOptions"></div>
-            <h2>Popular traveling destinations</h2>
-        </div>
+    <!-- Budsjett Reiser -->
+    <section class="forskjelligeBudsjetter">
+      <h2>Travel on different budgets</h2>
+      <!-- Add dynamic budget options here -->
+    </section>
 
+    <!-- Topp destinasjoner -->
+    <section id="topDestinations" class="top-destinations">
+      <!-- Placeholder for top destinations -->
+    </section>
+  </main>
 
-        <!--3 forskjellige budsjetter-->
-        <div class="forskjelligeBudsjetter">
-            <h2>Travel on diffrent budjets</h2>
-        </div>
-        
-
-
-        </div>
-
-        <div id="topDestinations">
-
-        </div>
-
-
-
-    </main>
-    <footer>
-        <div>
-           <p>© This site is owned by Travel Travelagency</p>
-           <p><a href="sammarbeidspartnere.html">Our business partners</p></a>
-        </div>
-        <div>
-            <p>
-                Email:TravelTravelagency@gmail.com
-            </p>
-            <p>
-                Call us:12345678
-            </p>
-        </div>
-    </footer>
+  <footer class="flex-between footer">
+    <div>
+      <p>© This site is owned by Travel Travelagency</p>
+      <p><a href="sammarbeidspartnere.html">Our business partners</a></p>
+    </div>
+    <div>
+      <p>Email: TravelTravelagency@gmail.com</p>
+      <p>Call us: 12345678</p>
+    </div>
+  </footer>
 </body>
 </html>

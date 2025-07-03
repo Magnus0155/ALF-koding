@@ -27,7 +27,7 @@
     "tittel": "Ukestur til Madrid",
     "beskrivelse": "Ta en uke i madrid og opplev spanias hovedstad.",
     "pris": 16999,
-    "bilde": "images/Madrid.jpg",
+    "bilde": "Images/Madrid.jpg",
     "type": "tilbud",
     "kategori": "storby"
   },
@@ -35,7 +35,7 @@
     "tittel": "Paris to uker",
     "beskrivelse": "Opplev alt paris har å tilby.",
     "pris": 19999,
-    "bilde": "images/Paris.jpg",
+    "bilde": "Images/Paris.jpg",
     "type": "tilbud",
     "kategori": "storby"
   },
@@ -43,13 +43,21 @@
     "tittel": "Rundreise i Frankrike",
     "beskrivelse": "Opplev Tokyo, Kyoto og mer på 12 dager.",
     "pris": 16999,
-    "bilde": "images/Frankrike.jpg",
+    "bilde": "Images/Frankrike.jpg",
     "type": "vanlig",
    "kategori": "rundreise"
   },
   {
+    "tittel": "Hellas – All inclusive",
+    "beskrivelse": "17 netter på strandhotell med alt inkludert.",
+    "pris": 5999,
+    "bilde": "/Images/Family.jpg",
+    "type": "tilbud",
+    "kategori": "faimillie"
+  },
+  {
     "tittel": "Opplev New York",
-    "beskrivelse": "besøk USA sin .",
+    "beskrivelse": "besøk USA sin kulturby i østkysten.",
     "pris": 19999,
     "bilde": "images/NY.jpg",
     "type": "tilbud",

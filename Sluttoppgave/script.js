@@ -154,3 +154,29 @@ export async function fetchBookings(ulElement) {
     ulElement.appendChild(li);
   });
 }
+
+/*spesielle tilbud*/
+fetch("data/reiser.json")
+  .then((response) => response.json())
+  .then((reiser) => {
+    const container = document.getElementById("tilbud-container");
+
+    const tilbud = reiser.filter((r) => r.type === "tilbud");
+
+    tilbud.forEach((reise) => {
+      const kort = document.createElement("div");
+      kort.className = "tilbud-card";
+
+      kort.innerHTML = `
+        <img src="${reise.bilde}" alt="${reise.tittel}" />
+        <h3>${reise.tittel}</h3>
+        <p>${reise.beskrivelse}</p>
+        <strong>${reise.pris} kr</strong>
+      `;
+
+      container.appendChild(kort);
+    });
+  })
+  .catch((error) => {
+    console.error("Klarte ikke å laste reiser:", error);
+  });

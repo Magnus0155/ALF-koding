@@ -44,7 +44,7 @@ console.log("Removed:", remove)
 
 //g
 
-let notArr = "Hello Weeerld" /*Scouser*/
+let notArr = "Hello Worrld" 
 
 console.log(Array.isArray(arr))
 console.log(Array.isArray(notArr))

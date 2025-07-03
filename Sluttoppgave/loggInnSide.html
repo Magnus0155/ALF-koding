@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Logg inn</title>
+  <script type="module">
+    import { handleLogin } from "./app.js";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const email = document.getElementById("loginEmail");
+      const pass = document.getElementById("loginPassword");
+      const btn = document.getElementById("loginBtn");
+      const status = document.getElementById("loginStatus");
+
+      btn.addEventListener("click", () => {
+        handleLogin(email.value, pass.value, status);
+      });
+    });
+  </script>
 </head>
 <body>
-    <input type="text" name="" id="">
-    <input type="text" name="" id="">
-    <input type="email" name="" id="">
-    
-<input type="password" name="" id="">
+  <h1>Logg inn</h1>
+  <input type="email" id="loginEmail" placeholder="E-post" />
+  <input type="password" id="loginPassword" placeholder="Passord" />
+  <button id="loginBtn">Logg inn</button>
+  <p id="loginStatus"></p>
+  <p><a href="index.html">Tilbake til forsiden</a></p>
 </body>
 </html>

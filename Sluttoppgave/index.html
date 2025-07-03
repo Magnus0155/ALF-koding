@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+      <script type="module">
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAPhYBT6LHJ4ATaWS4S4hxsjcogttHmNuo",
+  authDomain: "reisebyra-test.firebaseapp.com",
+  projectId: "reisebyra-test",
+  storageBucket: "reisebyra-test.firebasestorage.app",
+  messagingSenderId: "575222547238",
+  appId: "1:575222547238:web:04427c1a2a61962e9bf7e7"
+};
+
+// Initialize Firebase
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    window.db = db; // Gjør tilgjengelig i script.js
+    window.addDoc = addDoc;
+    window.collection = collection;
+  </script>
+</head>
+<body id="landingPage">
+    <header>
+        <div>
+        <img id="headerLogo" src="Images/air.png" alt="">
+        </div>
+        <div>
+            <input id="searchInput" type="Search" placeholder="Search">
+        </div>
+        <div>
+            <button id="loggInnBtn">Logg inn</button>
+            <p id="userInfo"></p>
+            <button id="logoutBtn" style="display:none;">Logg ut</button>
+        </div>
+        <nav id="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="OmOss.html">About us</a></li>
+            <li><a href="Destinasjoner.html">Destinasjons</a></li>
+            <li><a href="Lag en konto.html">Logg inn</a></li>
+            <li><a href="Kontakt oss.html">Kontakt oss</a></li>
+            <li><a href="Bestilllingsside.html">Book a trip</a></li>
+            <li><a href="mine-bestillinger.html">My Bookings</a></li>
+        </nav>
+    </header>  
+    <main id="reisebilde">
+        <div id="reiseTekst">
+            <h1>Travel Travelagency</h1>
+            <h2>Travel the world today</h2>
+            <h3>We offer tours across the world</h3>
+        </div>
+
+        <!--Legge til en api enten for brukerens posisjon eller for reisested-->
+
+        <!--3 "spesielle" tilbud-->
+        <div class="specialOfferContainer">
+            <h2>Special offers</h2>
+
+        </div>
+
+        <!--Legge til en falsk add for å se hvordan det vil se ut-->
+        <div id="fakeAdd"></div>
+
+        <!--Legg ril 6 populære destinasjoner gjærne dynamisk-->
+        <div class="popularTravelsContainer">
+            <h2>Popular traveling destinations</h2>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div> 
+            <div></div>
+        </div>
+
+
+        <!--3 forskjellige budsjetter-->
+        <div class="forskjelligeBudsjetter">
+            <h2>Travel on diffrent budjets</h2>
+        </div>
+
+    </main>
+
+    
+    <footer>
+        <div>
+           <p>© This site is owned by Travel Travelagency</p>
+           <p><a href="sammarbeidspartnere.html">Our business partners</p></a>
+        </div>
+        <div>
+            <p>
+                Email:TravelTravelagency@gmail.com
+            </p>
+            <p>
+                Call us:12345678
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

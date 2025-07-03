@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bestill reise</title>
+  <script type="module">
+    import { initAuthUI, sendBooking } from "./app.js";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initAuthUI();
+
+      const form = document.getElementById("bookingForm");
+      const status = document.getElementById("formStatus");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        sendBooking(form, status);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Bestill reise</h1>
+  <p id="userInfo"></p>
+  <button id="logoutBtn" style="display:none;">Logg ut</button>
+
+  <form id="bookingForm">
+    <input type="text" name="navn" placeholder="Navn" required />
+    <input type="text" name="destinasjon" placeholder="Destinasjon" required />
+    <input type="date" name="dato" required />
+    <button type="submit">Send</button>
+  </form>
+
+  <p id="formStatus"></p>
+  <p><a href="index.html">Tilbake til forsiden</a></p>
+</body>
+</html>

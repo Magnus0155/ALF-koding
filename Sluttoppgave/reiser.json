@@ -21,7 +21,7 @@
     "type": "vanlig",
     "kategori": "rundreise",
     "budsjettKategori":"under 20000"
-    
+
   },
   {
     "tittel": "Storbyhelg i Roma",
@@ -79,7 +79,7 @@
     "tittel": "Opplev New York",
     "beskrivelse": "besøk USA sin kulturby i østkysten.",
     "pris": 19999,
-       "dager": 14,
+    "dager": 14,
     "bilde": "images/NY.jpg",
     "type": "tilbud",
     "kategori": "storby",

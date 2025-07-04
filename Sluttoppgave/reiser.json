@@ -4,18 +4,24 @@
     "beskrivelse": "7 netter på strandhotell med alt inkludert.",
     "pris": 9999,
     "dager": 7,
-    "bilde": "https://picsum.photos/300?gr1",
+    "bilde": "Images/Hellas1.jpg",
     "type": "tilbud",
-    "kategori": "all inclusive"
+    "kategori": "all inclusive",
+    "populært": "ja",
+    "budsjettKategori":"under 10000",
+    "anbefalt": "nei"
   },
   {
     "tittel": "Rundreise i Japan",
     "beskrivelse": "Opplev Tokyo, Kyoto og mer på 12 dager.",
     "pris": 16999,
     "dager": 12,
-    "bilde": "https://picsum.photos/300?jp1",
+    "bilde": "Images/Japan1.jpg",
+    "populært": "ja",
     "type": "vanlig",
-   "kategori": "rundreise"
+    "kategori": "rundreise",
+    "budsjettKategori":"under 20000"
+    
   },
   {
     "tittel": "Storbyhelg i Roma",
@@ -24,7 +30,9 @@
     "dager": 3,
     "bilde": "https://picsum.photos/300?it1",
     "type": "tilbud",
-    "kategori": "storby"
+    "populært": "ja",
+    "kategori": "storby",
+    "budsjettKategori":"under 5000"
   },
     {
     "tittel": "Ukestur til Madrid",
@@ -33,7 +41,9 @@
     "dager": 7,
     "bilde": "Images/Madrid.jpg",
     "type": "tilbud",
-    "kategori": "storby"
+    "populært": "ja",
+    "kategori": "storby",
+    "budsjettKategori":"under 15000"
   },
   {
     "tittel": "Paris to uker",
@@ -42,7 +52,8 @@
     "dager": 14,
     "bilde": "Images/Paris.jpg",
     "type": "tilbud",
-    "kategori": "storby"
+    "kategori": "storby",
+        "budsjettKategori":"under 20000"
   },
   {
     "tittel": "Rundreise i Frankrike",
@@ -51,7 +62,8 @@
     "dager": 17,
     "bilde": "Images/Frankrike.jpg",
     "type": "vanlig",
-   "kategori": "rundreise"
+   "kategori": "rundreise",
+       "budsjettKategori":"under 20000"
   },
   {
     "tittel": "Hellas – All inclusive",
@@ -59,6 +71,7 @@
     "pris": 23999,
     "dager": 17,
     "bilde": "/Images/Family.jpg",
+    "populært": "ja",
     "type": "tilbud",
     "kategori": "faimillie"
   },
@@ -69,7 +82,8 @@
        "dager": 14,
     "bilde": "images/NY.jpg",
     "type": "tilbud",
-    "kategori": "storby"
+    "kategori": "storby",
+    "budsjettKategori":"under 20000"
   },
   {
     "tittel": "Stockholm",
@@ -77,7 +91,9 @@
     "pris": 19999,
     "dager": 14,
     "bilde": "images/Stockholm.jpg",
+    "populært": "ja",
     "type": "tilbud",
-    "kategori": "populært nå"
+    "kategori": "populært nå",
+    "budsjettKategori":"under 10000"
   }
 ]

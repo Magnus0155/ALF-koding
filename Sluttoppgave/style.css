@@ -201,6 +201,28 @@ section h2 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+/* === Kategorier seksjon === */
+#kategorier-section {
+    background: linear-gradient(to right, #ff7e5f, #90e0ef);
+}
+
+.kategori-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.kategori {
+  background: #e3f2fd;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
 /* === Budsjett seksjon === */
 .forskjelligeBudsjetter {
   background-color: #edf6f9;
@@ -244,29 +266,6 @@ footer a:hover {
     flex-direction: column;
     align-items: center;
   }
-}
-
-/* === Kategorier seksjon === */
-
-#kategorier-section {
-    background: linear-gradient(to right, #ff7e5f, #90e0ef);
-}
-
-.kategori-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.kategori {
-  background: #e3f2fd;
-  padding: 1rem;
-  text-align: center;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s;
 }
 
 /*utdatert men vurderer å beholde noe */

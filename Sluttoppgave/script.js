@@ -128,7 +128,7 @@ export async function sendBooking(form, statusEl) {
   }
 }
 
-// 📋 Hent bestillinger for innlogget bruker
+//  Hent bestillinger for innlogget bruker
 export async function fetchBookings(ulElement) {
   const user = auth.currentUser;
   if (!user) {
@@ -185,7 +185,7 @@ fetch("reiser.json")
 
 /*Kategorier*/ 
 
-fetch("data/kategorier.json")
+fetch("reiser.json")
   .then((res) => reiser.json())
   .then((kategorier) => {
     const container = document.getElementById("kategorier");

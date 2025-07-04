@@ -3,25 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Registrer</title>
-  <script type="module">
-    import { handleRegistration, loginWithGoogle } from "./app.js";
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const email = document.getElementById("email");
-      const pass = document.getElementById("password");
-      const regBtn = document.getElementById("registerBtn");
-      const googleBtn = document.getElementById("googleBtn");
-      const status = document.getElementById("status");
-
-      regBtn.addEventListener("click", () =>
-        handleRegistration(email.value, pass.value, status)
-      );
-
-      googleBtn.addEventListener("click", () =>
-        loginWithGoogle(status)
-      );
-    });
-  </script>
+<script type="module" src="script.js"></script>
 </head>
 <body>
   <h1>Registrer deg</h1>

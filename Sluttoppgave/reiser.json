@@ -2,7 +2,8 @@
   {
     "tittel": "Hellas – All inclusive",
     "beskrivelse": "7 netter på strandhotell med alt inkludert.",
-    "pris": 2999,
+    "pris": 9999,
+    "dager": 7,
     "bilde": "https://picsum.photos/300?gr1",
     "type": "tilbud",
     "kategori": "all inclusive"
@@ -11,6 +12,7 @@
     "tittel": "Rundreise i Japan",
     "beskrivelse": "Opplev Tokyo, Kyoto og mer på 12 dager.",
     "pris": 16999,
+    "dager": 12,
     "bilde": "https://picsum.photos/300?jp1",
     "type": "vanlig",
    "kategori": "rundreise"
@@ -19,6 +21,7 @@
     "tittel": "Storbyhelg i Roma",
     "beskrivelse": "3 netter på hotell i hjertet av Roma.",
     "pris": 4999,
+    "dager": 3,
     "bilde": "https://picsum.photos/300?it1",
     "type": "tilbud",
     "kategori": "storby"
@@ -26,7 +29,8 @@
     {
     "tittel": "Ukestur til Madrid",
     "beskrivelse": "Ta en uke i madrid og opplev spanias hovedstad.",
-    "pris": 16999,
+    "pris": 12999,
+    "dager": 7,
     "bilde": "Images/Madrid.jpg",
     "type": "tilbud",
     "kategori": "storby"
@@ -35,14 +39,16 @@
     "tittel": "Paris to uker",
     "beskrivelse": "Opplev alt paris har å tilby.",
     "pris": 19999,
+    "dager": 14,
     "bilde": "Images/Paris.jpg",
     "type": "tilbud",
     "kategori": "storby"
   },
   {
     "tittel": "Rundreise i Frankrike",
-    "beskrivelse": "Opplev Tokyo, Kyoto og mer på 12 dager.",
+    "beskrivelse": "Dra rundt i Frankrike og opplev kulturen.",
     "pris": 16999,
+    "dager": 17,
     "bilde": "Images/Frankrike.jpg",
     "type": "vanlig",
    "kategori": "rundreise"
@@ -50,7 +56,8 @@
   {
     "tittel": "Hellas – All inclusive",
     "beskrivelse": "17 netter på strandhotell med alt inkludert.",
-    "pris": 5999,
+    "pris": 23999,
+    "dager": 17,
     "bilde": "/Images/Family.jpg",
     "type": "tilbud",
     "kategori": "faimillie"
@@ -59,8 +66,18 @@
     "tittel": "Opplev New York",
     "beskrivelse": "besøk USA sin kulturby i østkysten.",
     "pris": 19999,
+       "dager": 14,
     "bilde": "images/NY.jpg",
     "type": "tilbud",
     "kategori": "storby"
+  },
+  {
+    "tittel": "Stockholm",
+    "beskrivelse": "Se hva hovedstaten i Sverige har å tilby.",
+    "pris": 19999,
+    "dager": 14,
+    "bilde": "images/Stockholm.jpg",
+    "type": "tilbud",
+    "kategori": "populært nå"
   }
 ]

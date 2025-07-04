@@ -22,7 +22,7 @@ import {
   getDocs
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-// 🔧 Firebase config
+//  Firebase config
 const firebaseConfig = {
   apiKey: "DIN_API_KEY",
   authDomain: "DITT_DOMENE.firebaseapp.com",
@@ -36,7 +36,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// 📍 Funksjoner for alle sider
+//  Funksjoner for alle sider
 window.auth = auth;
 window.db = db;
 
@@ -62,7 +62,7 @@ export function initAuthUI() {
   });
 }
 
-// 📩 Registrer ny bruker
+//  Registrer ny bruker
 export async function handleRegistration(email, password, statusEl) {
   if (!email.includes("@")) {
     statusEl.textContent = "❌ Ugyldig e-postadresse.";
@@ -82,7 +82,7 @@ export async function handleRegistration(email, password, statusEl) {
   }
 }
 
-// 🔐 Google login
+//  Google login
 export async function loginWithGoogle(statusEl) {
   try {
     const provider = new GoogleAuthProvider();
@@ -94,7 +94,7 @@ export async function loginWithGoogle(statusEl) {
   }
 }
 
-// 🔑 Logg inn med e-post/passord
+//  Logg inn med e-post/passord
 export async function handleLogin(email, password, statusEl) {
   try {
     await signInWithEmailAndPassword(auth, email, password);
@@ -104,7 +104,7 @@ export async function handleLogin(email, password, statusEl) {
   }
 }
 
-// 📦 Send booking
+//  Send booking
 export async function sendBooking(form, statusEl) {
   const user = auth.currentUser;
   if (!user) {
@@ -204,3 +204,41 @@ fetch("data/kategorier.json")
     });
   })
   .catch((err) => console.error("Feil ved lasting av kategorier:", err));
+
+
+
+// registrer
+
+    import { handleRegistration, loginWithGoogle } from "./app.js";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const email = document.getElementById("email");
+      const pass = document.getElementById("password");
+      const regBtn = document.getElementById("registerBtn");
+      const googleBtn = document.getElementById("googleBtn");
+      const status = document.getElementById("status");
+
+      regBtn.addEventListener("click", () =>
+        handleRegistration(email.value, pass.value, status)
+      );
+
+      googleBtn.addEventListener("click", () =>
+        loginWithGoogle(status)
+      );
+    });
+
+    // Mine bestillinger
+
+        import { initAuthUI, sendBooking } from "./app.js";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initAuthUI();
+
+      const form = document.getElementById("bookingForm");
+      const status = document.getElementById("formStatus");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        sendBooking(form, status);
+      });
+    });

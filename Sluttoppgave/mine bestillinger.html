@@ -3,21 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <title>Bestill reise</title>
-  <script type="module">
-    import { initAuthUI, sendBooking } from "./app.js";
-
-    document.addEventListener("DOMContentLoaded", () => {
-      initAuthUI();
-
-      const form = document.getElementById("bookingForm");
-      const status = document.getElementById("formStatus");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        sendBooking(form, status);
-      });
-    });
-  </script>
 </head>
 <body>
   <h1>Bestill reise</h1>

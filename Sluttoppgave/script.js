@@ -1,4 +1,4 @@
-// app.js
+// === Firebase setup ===
 import {
   initializeApp
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
@@ -22,7 +22,7 @@ import {
   getDocs
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-//  Firebase config
+// === Firebase config ===
 const firebaseConfig = {
   apiKey: "DIN_API_KEY",
   authDomain: "DITT_DOMENE.firebaseapp.com",
@@ -35,12 +35,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-
-//  Funksjoner for alle sider
 window.auth = auth;
 window.db = db;
 
-// Brukerstatus (vis e-post og logg ut)
+// === Autentisering UI-status ===
 export function initAuthUI() {
   const userInfo = document.getElementById("userInfo");
   const logoutBtn = document.getElementById("logoutBtn");
@@ -62,7 +60,7 @@ export function initAuthUI() {
   });
 }
 
-//  Registrer ny bruker
+// === Registrering ===
 export async function handleRegistration(email, password, statusEl) {
   if (!email.includes("@")) {
     statusEl.textContent = "❌ Ugyldig e-postadresse.";
@@ -82,7 +80,7 @@ export async function handleRegistration(email, password, statusEl) {
   }
 }
 
-//  Google login
+// === Google login ===
 export async function loginWithGoogle(statusEl) {
   try {
     const provider = new GoogleAuthProvider();
@@ -94,7 +92,7 @@ export async function loginWithGoogle(statusEl) {
   }
 }
 
-//  Logg inn med e-post/passord
+// === Innlogging med e-post ===
 export async function handleLogin(email, password, statusEl) {
   try {
     await signInWithEmailAndPassword(auth, email, password);
@@ -104,7 +102,7 @@ export async function handleLogin(email, password, statusEl) {
   }
 }
 
-//  Send booking
+// === Send booking ===
 export async function sendBooking(form, statusEl) {
   const user = auth.currentUser;
   if (!user) {
@@ -128,7 +126,7 @@ export async function sendBooking(form, statusEl) {
   }
 }
 
-//  Hent bestillinger for innlogget bruker
+// === Hent bestillinger ===
 export async function fetchBookings(ulElement) {
   const user = auth.currentUser;
   if (!user) {
@@ -136,10 +134,7 @@ export async function fetchBookings(ulElement) {
     return;
   }
 
-  const q = query(
-    collection(db, "bestillinger"),
-    where("bruker", "==", user.uid)
-  );
+  const q = query(collection(db, "bestillinger"), where("bruker", "==", user.uid));
   const snapshot = await getDocs(q);
   ulElement.innerHTML = "";
 
@@ -155,90 +150,129 @@ export async function fetchBookings(ulElement) {
   });
 }
 
-/*spesielle tilbud*/
-fetch("reiser.json")
-  .then((response) => response.json())
-  .then((reiser) => {
-    const container = document.getElementById("tilbud-container");
-    const tilbud = reiser.filter((r) => r.type === "tilbud").slice(0, 4); 
-    //  Begrens til 4 med slice
+// === Tilbud: Hent og vis ===
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("reiser.json")
+    .then((response) => response.json())
+    .then((reiser) => {
+      const container = document.getElementById("tilbud-container");
+      const tilbud = reiser.filter((r) => r.type === "tilbud").slice(0, 4);
 
-    tilbud.forEach((reise) => {
-      const kort = document.createElement("div");
-      kort.className = "tilbud-card card";
-
-      kort.innerHTML = `
-        <img src="${reise.bilde}" alt="${reise.tittel || 'Reisebilde'}" />
-        <h3>${reise.tittel}</h3>
-        <p>${reise.beskrivelse}</p>
-        <strong>${reise.pris} kr</strong>
-      `;
-
-      container.appendChild(kort);
-    });
-  })
-  .catch((error) => {
-    document.getElementById("tilbud-container").innerHTML =
-      "<p>Kunne ikke laste tilbud akkurat nå.</p>";
-    console.error("Klarte ikke å laste reiser:", error);
-  });
-
-/*Kategorier*/ 
-
-fetch("reiser.json")
-  .then((res) => reiser.json())
-  .then((kategorier) => {
-    const container = document.getElementById("kategorier");
-
-    kategorier.forEach((kategori) => {
-      const knapp = document.createElement("a");
-      knapp.className = "kategori-knapp";
-      knapp.href = kategori.lenke;
-
-      knapp.innerHTML = `
-        <img src="${kategori.bilde}" alt="${kategori.navn}" />
-        <h3>${kategori.navn}</h3>
-      `;
-
-      container.appendChild(knapp);
-    });
-  })
-  .catch((err) => console.error("Feil ved lasting av kategorier:", err));
-
-
-
-// registrer
-
-    import { handleRegistration, loginWithGoogle } from "./app.js";
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const email = document.getElementById("email");
-      const pass = document.getElementById("password");
-      const regBtn = document.getElementById("registerBtn");
-      const googleBtn = document.getElementById("googleBtn");
-      const status = document.getElementById("status");
-
-      regBtn.addEventListener("click", () =>
-        handleRegistration(email.value, pass.value, status)
-      );
-
-      googleBtn.addEventListener("click", () =>
-        loginWithGoogle(status)
-      );
-    });
-
-    // Mine bestillinger
-
-        import { initAuthUI, sendBooking } from "./app.js";
-
-    document.addEventListener("DOMContentLoaded", () => {
-      initAuthUI();
-
-      const form = document.getElementById("bookingForm");
-      const status = document.getElementById("formStatus");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        sendBooking(form, status);
+      tilbud.forEach((reise) => {
+        const kort = document.createElement("div");
+        kort.className = "tilbud-card card";
+        kort.innerHTML = `
+          <img src="${reise.bilde}" alt="${reise.tittel || 'Reisebilde'}" />
+          <h3>${reise.tittel}</h3>
+          <p>${reise.beskrivelse}</p>
+          <strong>${reise.pris} kr</strong>
+        `;
+        container.appendChild(kort);
       });
+    })
+    .catch((error) => {
+      document.getElementById("tilbud-container").innerHTML =
+        "<p>Kunne ikke laste tilbud akkurat nå.</p>";
+      console.error("Klarte ikke å laste reiser:", error);
     });
+});
+
+// === Populære reiser ===
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("reiser.json")
+    .then((response) => response.json())
+    .then((reiser) => {
+      const container = document.getElementById("popularTravel-container");
+      const tilbud = reiser.filter((r) => r.populært === "ja").slice(0, 8);
+
+      if (!tilbud.length) {
+        container.innerHTML = "<p>Ingen populære reiser funnet.</p>";
+        return;
+      }
+
+      tilbud.forEach((reise) => {
+        const kort = document.createElement("div");
+        kort.className = "populaer-card";
+        kort.innerHTML = `
+          <img src="${reise.bilde}" alt="${reise.tittel || 'Reisebilde'}" />
+          <h3>${reise.tittel}</h3>
+          <p>${reise.beskrivelse}</p>
+          <strong>${reise.pris} kr</strong>
+        `;
+        container.appendChild(kort);
+      });
+    })
+    .catch((error) => {
+      document.getElementById("popularTravel-container").innerHTML =
+        "<p>Kunne ikke laste tilbud akkurat nå.</p>";
+      console.error("Klarte ikke å laste reiser:", error);
+    });
+});
+
+// === Våre anbefalinger ===
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("reiser.json")
+    .then((response) => response.json())
+    .then((reiser) => {
+      const container = document.getElementById("popularTravel-container");
+      const tilbud = reiser.filter((r) => r.populært === "ja").slice(0, 8);
+
+      if (!tilbud.length) {
+        container.innerHTML = "<p>Ingen populære reiser funnet.</p>";
+        return;
+      }
+
+      tilbud.forEach((reise) => {
+        const kort = document.createElement("div");
+        kort.className = "populaer-card";
+        kort.innerHTML = `
+          <img src="${reise.bilde}" alt="${reise.tittel || 'Reisebilde'}" />
+          <h3>${reise.tittel}</h3>
+          <p>${reise.beskrivelse}</p>
+          <strong>${reise.pris} kr</strong>
+        `;
+        container.appendChild(kort);
+      });
+    })
+    .catch((error) => {
+      document.getElementById("popularTravel-container").innerHTML =
+        "<p>Kunne ikke laste tilbud akkurat nå.</p>";
+      console.error("Klarte ikke å laste reiser:", error);
+    });
+});
+
+
+// === Registrer side: Håndter registrering ===
+document.addEventListener("DOMContentLoaded", () => {
+  const email = document.getElementById("email");
+  const pass = document.getElementById("password");
+  const regBtn = document.getElementById("registerBtn");
+  const googleBtn = document.getElementById("googleBtn");
+  const status = document.getElementById("status");
+
+  if (regBtn && googleBtn) {
+    regBtn.addEventListener("click", () =>
+      handleRegistration(email.value, pass.value, status)
+    );
+
+    googleBtn.addEventListener("click", () =>
+      loginWithGoogle(status)
+    );
+  }
+});
+
+// === Mine bestillinger: Håndter skjema ===
+document.addEventListener("DOMContentLoaded", () => {
+  initAuthUI();
+
+  const form = document.getElementById("bookingForm");
+  const status = document.getElementById("formStatus");
+
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      sendBooking(form, status);
+    });
+  }
+});

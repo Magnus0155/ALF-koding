@@ -66,7 +66,7 @@ nav a:hover {
 /* === Hero Section === */
 #reiseTekst {
   text-align: center;
-  background: url("images/Bilde\ Ben.jpg") center/cover no-repeat;
+  background: url("images/Beach1.jpg") center/cover no-repeat;
   color: white;
   padding: 4rem 1rem;
 }
@@ -203,7 +203,8 @@ section h2 {
 
 /* === Kategorier seksjon === */
 #kategorier-section {
-    background: linear-gradient(to right, #ff7e5f, #90e0ef);
+    background: linear-gradient(to right, #0077cc, #90e0ef);
+    padding-bottom: 20px;
 }
 
 .kategori-wrapper {
@@ -214,21 +215,140 @@ section h2 {
 }
 
 .kategori {
-  background: #e3f2fd;
-  padding: 1rem;
-  text-align: center;
-  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s;
+  border-radius: 10px;
 }
 
-/* === Budsjett seksjon === */
-.forskjelligeBudsjetter {
-  background-color: #edf6f9;
-  padding: 2rem;
+#familie {
+    background-image: url("Images/Family1.jpg");
+}
+
+#kultur {
+    background-image: url("Images/Kultur1.jpg");
+}
+
+#storby {
+    background-image: url("Images/Ben.jpg");
+}
+
+#allinclusive {
+    background-image: url("Images/Allinclusive1.jpg");
+}
+/* === Populære reiser seksjon === */
+
+#popular-travel-section {
+  background-color: #f0f8ff;
+  padding: 3rem 1rem;
   text-align: center;
 }
+
+#popular-travel-section h2 {
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.populaer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.populaer-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.populaer-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.populaer-card h3 {
+  margin: 0.5rem 0;
+  color: #0077cc;
+}
+
+.populaer-card p {
+  font-size: 0.95rem;
+  color: #555;
+  padding: 0 0.5rem;
+}
+
+.populaer-card strong {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #003366;
+}
+
+
+/* === Budsjett seksjon === */
+#forskjelligeBudsjetter {
+    background: linear-gradient(to right, #0077cc, #90e0ef);
+    padding-bottom: 20px;
+}
+
+.budsjett {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  height: 150px;
+  width: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+
+}
+
+#budsjett-5000 {
+  background-image: url("Images/Family1.jpg");
+}
+
+#budsjett-10000 {
+  background-image: url("Images/Kultur1.jpg");
+}
+
+#budsjett-15000 {
+  background-image: url("Images/Ben.jpg");
+}
+
+#budsjett-20000 {
+  background-image: url("Images/Allinclusive1.jpg");
+}
+
+.budsjett-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  padding: 1rem 0;
+}
+/* === Våre anbefalinger === */
+
+
 
 /* === Footer === */
 footer {

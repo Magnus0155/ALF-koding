@@ -1,0 +1,110 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background-color: #004c99;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header nav {
+  margin-top: 10px;
+}
+
+.header a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Reisedetaljer */
+#reise-detaljer-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#reise-detaljer-container h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#reise-detaljer-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+#reise-detaljer-container p {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+#reise-detaljer-container strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #007acc;
+}
+
+/*nav tilbake oppe og i kortet*/
+nav a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #007acc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #005f99;
+}
+nav {
+  text-align: center; 
+}
+
+/*kortet her*/
+
+#tilbake-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #007acc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9em;
+
+}

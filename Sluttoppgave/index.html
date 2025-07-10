@@ -6,6 +6,7 @@
   <title>Travel Travelagency</title>
   <link rel="stylesheet" href="style.css" />
   <script type="module" src="script.js"></script>
+  <script type="module" src="reiseVising.js"></script>
 </head>
 <body id="landingPage">
   <header class="flex-between header">
@@ -16,13 +17,13 @@
     </div>
     <nav>
       <ul class="nav-list flex-between">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="OmOss.html">About us</a></li>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="OmOss.html">Om oss</a></li>
         <li><a href="filtrering.html">Reisemål</a></li>
         <li><a href="Lag en konto.html">Logg inn</a></li>
-        <li><a href="Kontakt oss.html">Contact us</a></li>
-        <li><a href="Bestilllingsside.html">Book a trip</a></li>
-        <li><a href="mine-bestillinger.html">My bookings</a></li>
+        <li><a href="Kontakt oss.html">Kontakt us</a></li>
+        <li><a href="Bestilllingsside.html">Bestill en reise</a></li>
+        <li><a href="mine-bestillinger.html">Mine bestillinger</a></li>
       </ul>
     </nav>
   </header>  
@@ -30,6 +31,7 @@
   <main>
     <!-- Hero Section -->
      <!--Vurdere å Legge inn API enten vær eller varmegrader/begge-->
+     <!--Legge til id til alle i json-->
     <section id="hero" class="hero-section">
       <div id="reiseTekst" class="hero-text">
         <h1>Travel Travelagency</h1>
@@ -37,6 +39,13 @@
         <h3>We offer tours across the world</h3>
       </div>
     </section>
+    <!--Vær api section-->
+    <section id="vaer">
+        <h2>Været i London</h2>
+        <div id="vaer-info">Laster værdata...</div>
+    </section>
+
+        <script src="vaer.js" defer></script>
 
     <!-- Tilbud Section -->
     <section id="tilbud" class="card-wrapper">

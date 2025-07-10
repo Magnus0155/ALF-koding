@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mine bestillinger</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="flex-between header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img id="headerLogo" src="images/air.png" alt="Logo" />
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-list flex-between">
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="OmOss.html">Om oss</a></li>
+        <li><a href="filtrering.html">Reisemål</a></li>
+        <li><a href="Lag en konto.html">Logg inn</a></li>
+        <li><a href="Kontakt oss.html">Kontakt oss</a></li>
+        <li><a href="Bestillingsside.html">Bestill en reise</a></li>
+        <li><a href="mine-bestillinger.html">Mine bestillinger</a></li>
+      </ul>
+    </nav>
+  </header> 
+
+  <main>
+    <div id="notLoggedInMessage">
+      <p>Du må være logget inn for å se dine bestillinger.</p>
+      <button id="goHomeBtn">Tilbake til forsiden</button>
+    </div>
+
+    <ul id="bestillingsliste"></ul>
+
+    <form id="bookingForm">
+      <h2>Ny bestilling</h2>
+      <label for="navn">Navn:</label>
+      <input type="text" name="navn" id="navn" required /><br/>
+
+      <label for="destinasjon">Destinasjon:</label>
+      <input type="text" name="destinasjon" id="destinasjon" required /><br/>
+
+      <label for="dato">Dato:</label>
+      <input type="date" name="dato" id="dato" required /><br/>
+
+      <button type="submit">Send bestilling</button>
+      <div id="formStatus"></div>
+    </form>
+  </main>
+
+  <script type="module" src="mine-bestillinger.js"></script>
+</body>
+</html>

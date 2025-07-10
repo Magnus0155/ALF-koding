@@ -1,5 +1,6 @@
 [
   {
+    "id": "reise1",
     "tittel": "Hellas – All inclusive (7 dager)",
     "beskrivelse": "Nyt en avslappende uke med sol, strand og alt inkludert på vårt 4-stjerners resort.",
     "pris": 9999,
@@ -9,9 +10,12 @@
     "kategori": "familie",
     "budsjettKategori": "medium",
     "populært": "ja",
+    "url": "filtrering.html",
     "anbefalt": "ja"
+    
   },
   {
+    "id": "reise2",
     "tittel": "Roma – Kulturreise (5 dager)",
     "beskrivelse": "Utforsk historiske monumenter og italiensk matkultur i den evige stad.",
     "pris": 7999,
@@ -21,9 +25,11 @@
     "kategori": "kultur",
     "budsjettKategori": "medium",
     "populært": "ja",
+    "url": "filtrering.html",
     "anbefalt": "nei"
   },
   {
+    "id": "reise3",
     "tittel": "Bali – Eventyrferie (10 dager)",
     "beskrivelse": "Opplev regnskog, strender og balinesisk kultur med guide.",
     "pris": 14999,
@@ -33,9 +39,11 @@
     "kategori": "natur",
     "budsjettKategori": "premium",
     "populært": "ja",
+    "url": "filtrering.html",
     "anbefalt": "ja"
   },
   {
+    "id": "reise4",
     "tittel": "London – Byferie (3 dager)",
     "beskrivelse": "Kort og innholdsrik storbyferie med sightseeing og shopping.",
     "pris": 4999,
@@ -45,9 +53,11 @@
     "kategori": "by",
     "budsjettKategori": "lav",
     "populært": "nei",
+    "url": "filtrering.html",
     "anbefalt": "nei"
   },
   {
+    "id": "reise5",
     "tittel": "Fjelltur i Norge",
     "beskrivelse": "Oppdag majestetiske fjelltopper og dype daler.",
     "pris": 2999,
@@ -57,9 +67,11 @@
     "kategori": "natur",
     "budsjettKategori": "lav",
     "populært": "nei",
+    "url": "filtrering.html",
     "anbefalt": "ja"
   },
   {
+    "id": "reise6",
     "tittel": "Tokyo – Teknologi og tradisjon",
     "beskrivelse": "Bli med på en reise gjennom Japans futuristiske og historiske hovedstad.",
     "pris": 18999,
@@ -69,9 +81,11 @@
     "kategori": "by",
     "budsjettKategori": "premium",
     "populært": "ja",
+    "url": "filtrering.html",
     "anbefalt": "ja"
   },
   {
+    "id": "reise7",
     "tittel": "Safari i Kenya",
     "beskrivelse": "Bli med på safari og opplev savannens ville dyr.",
     "pris": 17999,
@@ -81,9 +95,11 @@
     "kategori": "natur",
     "budsjettKategori": "premium",
     "populært": "ja",
+    "url": "filtrering.html",
     "anbefalt": "nei"
   },
   {
+    "id": "reise8",
     "tittel": "Barcelona – Kunst og tapas",
     "beskrivelse": "Se Gaudis mesterverk og nyt spansk mat.",
     "pris": 6999,
@@ -93,9 +109,11 @@
     "kategori": "kultur",
     "budsjettKategori": "medium",
     "populært": "nei",
+    "url": "filtrering.html",
     "anbefalt": "ja"
   },
   {
+    "id": "reise9",
   "tittel": "Santorini – Solnedganger og hvitkalkede byer",
   "beskrivelse": "Opplev romantiske solnedganger og gresk sjarm på Santorini.",
   "pris": 8499,
@@ -105,9 +123,11 @@
   "kategori": "kultur",
   "budsjettKategori": "medium",
   "populært": "ja",
+  "url": "filtrering.html",
   "anbefalt": "ja"
 },
 {
+  "id": "reise10",
   "tittel": "Bali – Paradis for kropp og sjel",
   "beskrivelse": "Slapp av på strender, besøk templer og nyt spa i eksotiske Bali.",
   "pris": 9990,
@@ -117,9 +137,11 @@
   "kategori": "allinclusive",
   "budsjettKategori": "høy",
   "populært": "ja",
+  "url": "filtrering.html",
   "anbefalt": "nei"
 },
 {
+  "id": "reise11",
   "tittel": "New York – Skyskrapere og storbypuls",
   "beskrivelse": "Gå i Central Park, se Times Square og nyt bylivet døgnet rundt.",
   "pris": 10990,
@@ -129,6 +151,7 @@
   "kategori": "storby",
   "budsjettKategori": "høy",
   "populært": "ja",
+  "url": "filtrering.html",
   "anbefalt": "ja"
 }
 

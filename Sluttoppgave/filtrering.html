@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Filtrerte Reiser</title>
   <link rel="stylesheet" href="style.css" />
-  <script type="module" src="script.js"></script> <!-- eller filtrering.js hvis du splitter -->
+  <script type="module" src="script.js"></script>
+  <script type="module" src="filtrering.js"></script>
+
+
 </head>
 <body>
   <header class="flex-between header">
@@ -16,16 +19,17 @@
     </div>
     <nav>
       <ul class="nav-list flex-between">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="OmOss.html">About us</a></li>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="OmOss.html">Om oss</a></li>
         <li><a href="filtrering.html">Reisemål</a></li>
         <li><a href="Lag en konto.html">Logg inn</a></li>
-        <li><a href="Kontakt oss.html">Contact us</a></li>
-        <li><a href="Bestilllingsside.html">Book a trip</a></li>
-        <li><a href="mine-bestillinger.html">My bookings</a></li>
+        <li><a href="Kontakt oss.html">Kontakt us</a></li>
+        <li><a href="Bestilllingsside.html">Bestill en reise</a></li>
+        <li><a href="mine-bestillinger.html">Mine bestillinger</a></li>
       </ul>
     </nav>
   </header>  
+  <input type="text" id="sokeskjema" placeholder="Søk på reisemål eller beskrivelse" />
 
 <div class="container">
   <aside class="sidebar">
@@ -39,10 +43,9 @@
     </div>
     <div>
       <h4>Budsjett</h4>
-      <label><input type="checkbox" name="budsjett" value="under5000"> Under 5000</label><br>
-      <label><input type="checkbox" name="budsjett" value="under10000"> Under 10000</label><br>
-      <label><input type="checkbox" name="budsjett" value="under15000"> Under 15000</label><br>
-      <label><input type="checkbox" name="budsjett" value="under20000"> Under 20000</label><br>
+        <label><input type="radio" name="budsjett" value="under10000"> Under 10000</label><br>
+        <label><input type="radio" name="budsjett" value="10000-15000"> 10000 - 15000</label><br>
+        <label><input type="radio" name="budsjett" value="over15000"> Over 15000</label><br>
     </div>
   </aside>
 
@@ -51,7 +54,7 @@
     <div id="reise-container"></div>
   </main>
 </div>
-
+    <footer>
     <div>
       <p>Email: TravelTravelagency@gmail.com</p>
       <p>Call us: 12345678</p>

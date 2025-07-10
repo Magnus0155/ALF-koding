@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filtrerte Reiser</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="script.js"></script> <!-- eller filtrering.js hvis du splitter -->
+</head>
+<body>
+  <header class="flex-between header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img id="headerLogo" src="images/air.png" alt="Logo" />
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-list flex-between">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="OmOss.html">About us</a></li>
+        <li><a href="filtrering.html">Reisemål</a></li>
+        <li><a href="Lag en konto.html">Logg inn</a></li>
+        <li><a href="Kontakt oss.html">Contact us</a></li>
+        <li><a href="Bestilllingsside.html">Book a trip</a></li>
+        <li><a href="mine-bestillinger.html">My bookings</a></li>
+      </ul>
+    </nav>
+  </header>  
+
+<div class="container">
+  <aside class="sidebar">
+    <h3>Filtrer reiser</h3>
+    <div>
+      <h4>Kategorier</h4>
+      <label><input type="checkbox" name="kategori" value="familie"> Familie</label><br>
+      <label><input type="checkbox" name="kategori" value="kultur"> Kultur</label><br>
+      <label><input type="checkbox" name="kategori" value="storby"> Storby</label><br>
+      <label><input type="checkbox" name="kategori" value="allinclusive"> All Inclusive</label><br>
+    </div>
+    <div>
+      <h4>Budsjett</h4>
+      <label><input type="checkbox" name="budsjett" value="under5000"> Under 5000</label><br>
+      <label><input type="checkbox" name="budsjett" value="under10000"> Under 10000</label><br>
+      <label><input type="checkbox" name="budsjett" value="under15000"> Under 15000</label><br>
+      <label><input type="checkbox" name="budsjett" value="under20000"> Under 20000</label><br>
+    </div>
+  </aside>
+
+  <main class="reise-visning">
+    <!-- Her kommer reise-kortene -->
+    <div id="reise-container"></div>
+  </main>
+</div>
+
+    <div>
+      <p>Email: TravelTravelagency@gmail.com</p>
+      <p>Call us: 12345678</p>
+    </div>
+  </footer>
+</body>
+</html>

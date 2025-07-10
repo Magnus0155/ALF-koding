@@ -152,10 +152,12 @@ export async function fetchBookings(ulElement) {
 
 // === Tilbud: Hent og vis ===
 document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("tilbud-container");
+  if (!container) return;
+
   fetch("reiser.json")
     .then((response) => response.json())
     .then((reiser) => {
-      const container = document.getElementById("tilbud-container");
       const tilbud = reiser.filter((r) => r.type === "tilbud").slice(0, 4);
 
       tilbud.forEach((reise) => {
@@ -171,19 +173,19 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     })
     .catch((error) => {
-      document.getElementById("tilbud-container").innerHTML =
-        "<p>Kunne ikke laste tilbud akkurat nå.</p>";
+      container.innerHTML = "<p>Kunne ikke laste tilbud akkurat nå.</p>";
       console.error("Klarte ikke å laste reiser:", error);
     });
 });
 
 // === Populære reiser ===
-
 document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("popularTravel-container");
+  if (!container) return;
+
   fetch("reiser.json")
     .then((response) => response.json())
     .then((reiser) => {
-      const container = document.getElementById("popularTravel-container");
       const tilbud = reiser.filter((r) => r.populært === "ja").slice(0, 8);
 
       if (!tilbud.length) {
@@ -204,28 +206,29 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     })
     .catch((error) => {
-      document.getElementById("popularTravel-container").innerHTML =
-        "<p>Kunne ikke laste tilbud akkurat nå.</p>";
+      container.innerHTML = "<p>Kunne ikke laste tilbud akkurat nå.</p>";
       console.error("Klarte ikke å laste reiser:", error);
     });
 });
 
 // === Våre anbefalinger ===
 document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("våreAnbefalinger-container");
+  if (!container) return;
+
   fetch("reiser.json")
     .then((response) => response.json())
     .then((reiser) => {
-      const container = document.getElementById("popularTravel-container");
-      const tilbud = reiser.filter((r) => r.populært === "ja").slice(0, 8);
+      const anbefalinger = reiser.filter((r) => r.anbefalt === "ja").slice(0, 4);
 
-      if (!tilbud.length) {
-        container.innerHTML = "<p>Ingen populære reiser funnet.</p>";
+      if (!anbefalinger.length) {
+        container.innerHTML = "<p>Ingen anbefalinger funnet.</p>";
         return;
       }
 
-      tilbud.forEach((reise) => {
+      anbefalinger.forEach((reise) => {
         const kort = document.createElement("div");
-        kort.className = "populaer-card";
+        kort.className = "anbefaling-card";
         kort.innerHTML = `
           <img src="${reise.bilde}" alt="${reise.tittel || 'Reisebilde'}" />
           <h3>${reise.tittel}</h3>
@@ -236,12 +239,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     })
     .catch((error) => {
-      document.getElementById("popularTravel-container").innerHTML =
-        "<p>Kunne ikke laste tilbud akkurat nå.</p>";
+      container.innerHTML = "<p>Kunne ikke laste tilbud akkurat nå.</p>";
       console.error("Klarte ikke å laste reiser:", error);
     });
 });
-
 
 // === Registrer side: Håndter registrering ===
 document.addEventListener("DOMContentLoaded", () => {
@@ -273,6 +274,70 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       sendBooking(form, status);
+    });
+  }
+});
+
+// === Filtrering av valg html ===
+
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("reise-container");
+  let reiser = [];
+
+  fetch("reiser.json")
+    .then(res => res.json())
+    .then(data => {
+      reiser = data;
+      visReiser(reiser);
+    })
+    .catch(() => {
+      container.innerHTML = "<p>Kunne ikke hente reiser.</p>";
+    });
+
+  const checkboxes = document.querySelectorAll(".sidebar input[type=checkbox]");
+  checkboxes.forEach(box => {
+    box.addEventListener("change", filtrerReiser);
+  });
+
+  function filtrerReiser() {
+    const valgteKategorier = Array.from(document.querySelectorAll('input[name="kategori"]:checked')).map(el => el.value);
+    const valgteBudsjett = Array.from(document.querySelectorAll('input[name="budsjett"]:checked')).map(el => el.value);
+
+    let filtrerte = reiser;
+
+    if (valgteKategorier.length > 0) {
+      filtrerte = filtrerte.filter(r => valgteKategorier.includes(r.kategori.toLowerCase()));
+    }
+
+    if (valgteBudsjett.length > 0) {
+      filtrerte = filtrerte.filter(r => {
+        return valgteBudsjett.some(bud => {
+          const maxPris = parseInt(bud.replace("under", ""));
+          return r.pris <= maxPris;
+        });
+      });
+    }
+
+    visReiser(filtrerte);
+  }
+
+  function visReiser(liste) {
+    container.innerHTML = "";
+    if (liste.length === 0) {
+      container.innerHTML = "<p>Ingen reiser funnet med valgt filter.</p>";
+      return;
+    }
+    liste.forEach(reise => {
+      const kort = document.createElement("div");
+      kort.className = "reise-card";
+      kort.innerHTML = `
+        <img src="${reise.bilde}" alt="${reise.tittel}">
+        <h3>${reise.tittel}</h3>
+        <p>Pris: ${reise.pris} kr</p>
+        <p>Varighet: ${reise.dager} dager</p>
+        <p>Kategori: ${reise.kategori}</p>
+      `;
+      container.appendChild(kort);
     });
   }
 });

@@ -244,7 +244,8 @@ section h2 {
     background-image: url("Images/Allinclusive1.jpg");
 }
 /* === Populære reiser seksjon === */
-
+/*Vuder å legge til forskjellig hover/peker over efekti
+de ikke hardkodete delene*/
 #popular-travel-section {
   background-color: #f0f8ff;
   padding: 3rem 1rem;
@@ -347,7 +348,61 @@ section h2 {
   padding: 1rem 0;
 }
 /* === Våre anbefalinger === */
+#topReccomendations {
+  background-color: #f0f8ff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
 
+#topReccomendations h2 {
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.anbefaling-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.anbefaling-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.anbefaling-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.anbefaling-card h3 {
+  margin: 0.5rem 0;
+  color: #0077cc;
+}
+
+.anbefaling-card p {
+  font-size: 0.95rem;
+  color: #555;
+  padding: 0 0.5rem;
+}
+
+.anbefaling-card strong {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #003366;
+}
 
 
 /* === Footer === */
@@ -389,42 +444,67 @@ footer a:hover {
 }
 
 /*utdatert men vurderer å beholde noe */
-.parallax {
-    background-image: url("Images/Nature.jpg");
+.parallax, .parallax2, .parallax3 {
     min-height: 100vh; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
+
+/* Om oss-spesifikk styling */
+.parallax {
+    background-image: url("Images/Nature.jpg");
+}
 
 .parallax2 {
     background-image: url("Images/Cities.jpg");
-    min-height: 100vh; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
+
 .parallax3 {
     background-image: url("Images/Hotel.jpg");
-    min-height: 100vh; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
-.parallaxText {
-    height: 20vh;
-    display: flex;
-    justify-content:center;
-    flex-direction: column;
-    align-items: center;
-    background-color: #437eb1;
-    color: #ffffff;
-    margin:0;
+.omoss-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 1rem 1.5rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+
+.omoss-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0077b6;
+  border-bottom: 2px solid #0077b6;
+  padding-bottom: 0.3rem;
+  text-align: left;
+}
+
+.omoss-section p,
+.omoss-section ul {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.omoss-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.omoss-section ul li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .parallax, .parallax2, .parallax3 {
+    background-attachment: scroll;
+  }
 }
 
 /* === Tror ikke jeg trenger men se om det eksisterer i filene === */
@@ -468,4 +548,99 @@ footer a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
+}
+
+/* === Filtrering.html === */
+
+/* Grunnstil */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+  color: #0066cc;
+}
+
+/* Grid-container for reiser */
+#reise-container {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Reiseskort */
+.reise-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.reise-card:hover {
+  transform: scale(1.02);
+}
+
+.reise-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.reise-card h3 {
+  font-size: 1.2rem;
+  margin: 0.75rem 1rem 0.25rem;
+  color: #333;
+}
+
+.reise-card p {
+  font-size: 0.95rem;
+  margin: 0 1rem 1rem;
+  color: #555;
+}
+
+.reise-card strong {
+  display: block;
+  margin: 0 1rem 1rem;
+  font-size: 1rem;
+  color: #0077cc;
+}
+
+/* Mobilvennlig 
+@media (max-width: 600px) {
+  #reise-container {
+    padding: 1rem;
+  }
+}
+*/
+
+/*filtrering.html*/
+
+.container {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sidebar {
+  flex: 0 0 220px;
+  background: #f0f8ff;
+  padding: 1rem;
+  border-radius: 8px;
+  height: fit-content;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.reise-visning {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }

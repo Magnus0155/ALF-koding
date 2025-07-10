@@ -1,56 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Om oss - Travel Travelagency</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div>
-        <img id="headerLogo" src="Images/air.png" alt="">
-        </div>
-        <div>
-            <input id="searchInput" type="Search" placeholder="Search">
-        </div>
-        <div>
-            <button id="loggInnBtn">Logg inn</button>
-        </div>
-        <!--Oppdater lenkene-->
-        <nav id="navList">
-            <li><a href="http://127.0.0.1:5500/Oppgave1%20side%201.html">Hjem</a></li>
-            <li><a href="http://127.0.0.1:5500/Oppgave1%20side%202.html">Om oss</a></li>
-            <li><a href="http://127.0.0.1:5500/Oppgave1%20side%203.html">TBD</a></li>
-            <li><a href="">Logg inn</a></li>
-            <li><a href="">Kontakt oss</a></li>
-        </nav>
-    </header> 
+  <header class="flex-between header">
+    <div class="logo-container">
+      <img id="headerLogo" src="images/air.png" alt="Travel Travelagency logo" />
+    </div>
+    <div class="search-container">
+      <input id="searchInput" type="search" placeholder="Søk" />
+    </div>
+    <div class="user-controls">
+      <button id="loggInnBtn">Logg inn</button>
+      <p id="userInfo"></p>
+      <button id="logoutBtn" style="display:none;">Logg ut</button>
+    </div>
+    <nav>
+      <ul id="navList" class="nav-list flex-between">
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="OmOss.html">Om oss</a></li>
+        <li><a href="Destinasjoner.html">Destinasjoner</a></li>
+        <li><a href="Lag en konto.html">Logg inn</a></li>
+        <li><a href="Kontakt oss.html">Kontakt oss</a></li>
+        <li><a href="Bestilllingsside.html">Bestill reise</a></li>
+        <li><a href="mine-bestillinger.html">Mine bestillinger</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>     
-        <h1 class="parallaxText">Experience the world</h1>
-        <div class="parallax"></div>
-        <h1 class="parallaxText">Visit new Cities</h1>
-        <div class="parallax2"></div>
-        <h1 class="parallaxText">Relax and relief</h1>
-        <div class="parallax3"></div>
+  <main>     
+    <section class="omoss-section">
+    <h2>Vår historie</h2>
+    <p>Travel Travelagency ble grunnlagt med en lidenskap for å hjelpe
+         folk å oppleve verden på sine egne premisser. Vi tilbyr skreddersydde
+          reiseløsninger som passer alle typer reisende, enten det er 
+          familieferie, eventyr eller kultur.</p>
+    </section>
 
-        <div id="aboutUs">About us text here</div>
+    <section class="omoss-section parallax parallax1"></section>
 
-    </main>
+    <section class="omoss-section">
+    <h2>Vårt team-motto</h2>
+    <p>“Vi brenner for å skape minner som varer livet ut!”</p>
+    </section>
 
-    <footer>
-        <div>
-           <p>© This site is owned by Travel Travelagency</p>
-        </div>
-        <div>
-            <p>
-                Email:TravelTravelagency@gmail.com
-            </p>
-            <p>
-                Call us:12345678
-            </p>
-        </div>
-    </footer>    
+    <section class="omoss-section parallax parallax2"></section>
+
+    <section class="omoss-section">
+    <h2>Våre verdier</h2>
+    <ul>
+        <li>Personlig service med kunden i fokus</li>
+        <li>Bærekraftige og ansvarlige reiser</li>
+        <li>Enkelhet og trygghet i bestillingsprosessen</li>
+        <li>Fleksibilitet for dine ønsker og behov</li>
+    </ul>
+    </section>
+
+    <section class="omoss-section parallax parallax3"></section>
+
+  </main>
+
+  <footer>
+    <div>
+       <p>© This site is owned by Travel Travelagency</p>
+    </div>
+    <div>
+        <p>Email: TravelTravelagency@gmail.com</p>
+        <p>Call us: 12345678</p>
+    </div>
+  </footer>    
 </body>
 </html>
